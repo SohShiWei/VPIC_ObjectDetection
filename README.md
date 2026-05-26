@@ -120,11 +120,6 @@ This generates `vpic_dataset/` with the YOLO-ready split and `dataset.yaml`.
 Open `VPIC_TrainEvalTest.ipynb` and run all cells.
 Training outputs land in `runs/vpic_syringe_v1/`. The final cell exports `best.onnx`.
 
-### 5. Deploy to Meta Quest 3
-
-See [`Unity/VPIC_Quest3_Setup.md`](Unity/VPIC_Quest3_Setup.md) for the full Unity + Meta XR SDK setup.
-Copy `runs/vpic_syringe_v1/weights/best.onnx` and `Unity/VPIC_YOLOv8Detector.cs` into your Unity project.
-
 ---
 
 ## Dependencies
@@ -154,7 +149,6 @@ This repository is one component of the VPIC project:
 | Stereo Camera Pipeline | Depth estimation, 3D needle position |
 | React Dashboard | Real-time trainee feedback and session analytics |
 | Haptic Feedback | Controller vibration on insertion events |
-| Apple Vision Pro Port | Core ML export and visionOS integration |
 
 ---
 
@@ -164,8 +158,6 @@ This repository is one component of the VPIC project:
 - [ ] Stereo depth estimation for 3D syringe position
 - [ ] WebSocket stream from Unity to React dashboard
 - [ ] Retrain with `yolov8s` for higher mAP@0.5:0.95
-- [ ] Apple Vision Pro — Core ML export and deployment
-- [ ] Synthetic data generation for low-light conditions
 
 ---
 
