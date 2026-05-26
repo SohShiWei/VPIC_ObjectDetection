@@ -1,6 +1,6 @@
 # VPIC — Venepuncture & IV Cannulation Object Detection
 
-Part of the **VPIC AI-assisted AR/VR Training System** — a broader project building a real-time syringe and needle tracking pipeline for venepuncture and IV cannulation training on Meta Quest 3 and Apple Vision Pro.
+Part of the **VPIC AI-assisted AR/VR Training System** — a broader project building a real-time syringe and needle tracking pipeline for venepuncture and IV cannulation training on Meta Quest 3
 
 This repository covers the **computer vision / object detection** component: dataset preparation, YOLOv8n model training, evaluation, and Unity integration for on-device AR inference.
 
