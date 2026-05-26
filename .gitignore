@@ -1,0 +1,25 @@
+# ── Virtual environment ───────────────────────────────────────────
+venv/
+.venv/
+
+# ── Dataset folders (large binary files) ─────────────────────────
+vpic_dataset/
+data/
+
+# ── Model weights & training runs ────────────────────────────────
+runs/
+*.onnx
+*.mlpackage
+
+# ── Python cache ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+
+# ── OS files ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── VS Code ───────────────────────────────────────────────────────
+.vscode/

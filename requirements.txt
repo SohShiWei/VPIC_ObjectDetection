@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────────────────────────
+# VPIC — Venepuncture & IV Cannulation Training System
+# Requirements file
+# Python 3.10+
+# Install: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────
+ 
+# ── Core ML / Detection ───────────────────────────────────────────
+ultralytics>=8.2.0          # YOLOv8 — training, inference, export
+torch>=2.2.0                # PyTorch (CPU build; for CUDA see note below)
+torchvision>=0.17.0
+ 
+# ── Computer Vision ───────────────────────────────────────────────
+opencv-python>=4.9.0        # Image/video processing, bounding box drawing
+opencv-contrib-python>=4.9.0  # Extra modules (stereo camera, aruco markers)
+ 
+# ── Data & Augmentation ───────────────────────────────────────────
+albumentations>=1.4.0       # Training augmentation pipeline
+numpy>=1.26.0
+Pillow>=10.3.0
+ 
+# ── Data Pipeline ─────────────────────────────────────────────────
+PyYAML>=6.0.1               # dataset.yaml generation
+tqdm>=4.66.0                # Progress bars
+pandas>=2.2.0               # Training results.csv parsing (curves, metrics)
+ 
+# ── Visualisation & Notebook ──────────────────────────────────────
+matplotlib>=3.8.0
+ipykernel>=6.29.0           # Jupyter kernel — registers venv with VS Code
+ipywidgets>=8.1.0           # Interactive widgets in notebooks
+jupyterlab>=4.1.0
+notebook>=7.1.0             # Classic Jupyter notebook interface
+jupyter_client>=8.6.0       # Kernel communication layer
+pyzmq>=25.1.0               # ZeroMQ messaging — fixes kernel hang in VS Code
+jupyter_core>=5.7.0         # Core Jupyter config & path utilities
+nbformat>=5.10.0            # Notebook file format support
+nbconvert>=7.16.0           # Convert .ipynb to .py / .html / .pdf
+ 
+# ── Export & Deployment ───────────────────────────────────────────
+onnx>=1.16.0                # ONNX export (for Quest 3 / Vision Pro)
+onnxruntime>=1.18.0         # ONNX inference (CPU)
+# onnxruntime-gpu>=1.18.0   # Uncomment for GPU inference
+ 
+# ── React Dashboard (Python backend) ─────────────────────────────
+fastapi>=0.111.0            # REST API for Unity / React dashboard
+uvicorn[standard]>=0.29.0   # ASGI server
+websockets>=12.0            # Real-time feedback stream to dashboard
+ 
+# ─────────────────────────────────────────────────────────────────
+# GPU / CUDA NOTE
+# Default torch above installs CPU-only.
+# For NVIDIA GPU training, replace with:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# ─────────────────────────────────────────────────────────────────
