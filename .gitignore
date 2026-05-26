@@ -5,9 +5,11 @@ venv/
 # ── Dataset folders (large binary files) ─────────────────────────
 vpic_dataset/
 data/
+Unity/
 
 # ── Model weights & training runs ────────────────────────────────
 runs/
+*.pt
 *.onnx
 *.mlpackage
 

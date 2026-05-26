@@ -81,6 +81,48 @@ The model converged to mAP@0.5 ≥ 0.99 by epoch 23 and maintained 100% recall �
 
 ---
 
+## Training Findings
+
+### Training Curves
+
+![Training curves](docs/images/results.png)
+
+All loss metrics (box, class, DFL) converge smoothly across train and val sets with no sign of overfitting. mAP@0.5 reaches ≥ 0.99 by epoch 23 and stays there.
+
+### Precision-Recall Curve
+
+![Precision-Recall curve](docs/images/BoxPR_curve.png)
+
+Area under the PR curve = **0.994** — the model maintains near-perfect precision across the full recall range.
+
+### F1 Curve
+
+![F1 curve](docs/images/BoxF1_curve.png)
+
+Peak F1 score of **0.98** at a confidence threshold of ~0.5, confirming the model is well-calibrated with a wide operating window.
+
+### Confusion Matrix (Normalised)
+
+![Confusion matrix](docs/images/confusion_matrix_normalized.png)
+
+Near-perfect classification: 100% of syringe instances correctly detected, with background false positive rate effectively 0.
+
+### Validation Predictions vs Ground Truth
+
+| Ground Truth | Predictions |
+|:---:|:---:|
+| ![Ground truth labels](docs/images/val_batch0_labels.jpg) | ![Model predictions](docs/images/val_batch0_pred.jpg) |
+
+Predictions are spatially tight and confidence scores are consistently high (≥ 0.85) across varied syringe poses and backgrounds.
+
+### Training Batch Sample
+
+![Training batch](docs/images/train_batch0.jpg)
+
+Sample of augmented training images with YOLO bounding box labels overlaid.
+
+---
+
 ## Quickstart
 
 ### 1. Clone and set up environment
