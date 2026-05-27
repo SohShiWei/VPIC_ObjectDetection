@@ -7,7 +7,7 @@
  
 # ── Core ML / Detection ───────────────────────────────────────────
 ultralytics>=8.2.0          # YOLOv8 — training, inference, export
-torch>=2.2.0                # PyTorch (CPU build; for CUDA see note below)
+#torch>=2.2.0                # PyTorch (CPU build; for CUDA see note below)
 torchvision>=0.17.0
  
 # ── Computer Vision ───────────────────────────────────────────────
